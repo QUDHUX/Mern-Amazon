@@ -10,6 +10,10 @@ body {
 main {
   flex: 1;
 }
+.btn-primary{
+  background-color: #ffc000;
+  color: #000000;
+}
 /* header {
   background-color: #404040;
   padding: 1rem;
@@ -37,4 +41,7 @@ main {
 }
 .product-info {
   padding: 1rem;
+}
+.rating span{
+  color: #ffc000;
 }
