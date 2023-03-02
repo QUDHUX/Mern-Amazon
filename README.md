@@ -44,6 +44,11 @@
    5. use reducer hook
 
 9. Manage state by reducer hook
+
    1. define reducer
    2. update fetch data
    3. get state from useReducer
+
+10. Add bootsrap UI framework
+    1. npm install react-bootsrap bootsrap
+    2. update App.js
