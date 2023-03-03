@@ -44,7 +44,7 @@ const data = {
         {
             _id: '4',
             slug: 'Slim-striped-pocket-shirt',
-            name: 'Slim sriped pocket shirt',
+            name: 'Slim striped pocket shirt',
             category: 'shirts',
             image: '/images/product-4.jpg',
             price: 89,

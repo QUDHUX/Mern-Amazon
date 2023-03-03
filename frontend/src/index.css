@@ -10,7 +10,7 @@ body {
 main {
   flex: 1;
 }
-.btn-primary{
+.btn-primary {
   background-color: #ffc000;
   color: #000000;
 }
@@ -42,6 +42,9 @@ main {
 .product-info {
   padding: 1rem;
 }
-.rating span{
+.rating span {
   color: #ffc000;
+}
+.img-large {
+  max-width: 100%;
 }
