@@ -61,10 +61,16 @@
     3. use rating component in product component
 
 12. Create product detail screen
-13. fetch product from backend
-14. create 3 columns for image, info and action
+   1. fetch product from backend
+   2. create 3 columns for image, info and action
 
-15. Create loading and message component
-16. create loading component
-17. use spinner component
-18. create utils.js to define getError function
+13. Create loading and message component
+   1. create loading component
+   2. use spinner component
+   3. create utils.js to define getError function
+
+14. Implement add to cart item
+   1. create react context
+   2. define reducer
+   3. create store provider
+   4. implement add to cart button click handler
