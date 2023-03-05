@@ -9,6 +9,9 @@ import ListGroup from 'react-bootstrap/esm/ListGroup';
 import { useParams } from 'react-router-dom';
 import Rating from '../Components/Rating';
 import { Helmet } from 'react-helmet-async';
+import LoadingBox from '../Components/LoadingBox';
+import MessageBox from '../Components/MessageBox';
+import { getError } from '../util';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -40,7 +43,7 @@ function ProductScreen() {
         const result = await axios.get(`/api/product/slug/${slug}`);
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
       } catch (err) {
-        dispatch({ type: 'FETCH_FAIL', payload: err.message });
+        dispatch({ type: 'FETCH_FAIL', payload: getError(err) });
       }
 
       //setProducts(result.data);
@@ -48,9 +51,9 @@ function ProductScreen() {
     fetchData();
   }, [slug]);
   return loading ? (
-    <div>loading...</div>
+    <LoadingBox></LoadingBox>
   ) : error ? (
-    <div>{error}</div>
+    <MessageBox variant="danger">{error}</MessageBox>
   ) : (
     <div>
       <Row>
