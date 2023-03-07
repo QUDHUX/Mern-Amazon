@@ -41,7 +41,7 @@ function ProductScreen() {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const result = await axios.get(`/api/product/slug/${slug}`);
+        const result = await axios.get(`/api/products/slug/${slug}`);
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: getError(err) });
@@ -52,10 +52,20 @@ function ProductScreen() {
     fetchData();
   }, [slug]);
 
-const {state, dispatch:ctxDispatch} = useContext(Store)
-  const addToCartHandler = ()=>{
-      ctxDispatch({type: 'CART_ADD_ITEM', payload:{...product, quantity:1}})
-  }
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const { cart } = state;
+  const addToCartHandler = async () => {
+    const existItem = cart.cartItems.find((x) => x._id === product._id);
+    const quantity = existItem ? existItem.quantity + 1 : 1;
+    const { data } = await axios.get(`/api/products/${product._id}`);
+    if (data.countInStock < quantity) {
+      window.alert('sorry, product is out of stock');
+    }
+    ctxDispatch({
+      type: 'CART_ADD_ITEM',
+      payload: { ...product, quantity},
+    });
+  };
   return loading ? (
     <LoadingBox></LoadingBox>
   ) : error ? (
@@ -106,7 +116,9 @@ const {state, dispatch:ctxDispatch} = useContext(Store)
                 {product.countInStock > 0 && (
                   <ListGroup.Item>
                     <div className="d-grid">
-                      <Button variant="primary" onClick={addToCartHandler}>Add to Cart</Button>
+                      <Button variant="primary" onClick={addToCartHandler}>
+                        Add to Cart
+                      </Button>
                     </div>
                   </ListGroup.Item>
                 )}
