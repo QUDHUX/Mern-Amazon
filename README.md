@@ -93,3 +93,8 @@
    1. create signin form
    2. add email and password
    3. add signin button
+
+19. Connect to Mongo Database
+   1. install mongodb database
+   2. npm inlstall mongoose
+   3. connect to mongodb database
