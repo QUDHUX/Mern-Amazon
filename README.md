@@ -96,5 +96,6 @@
 
 19. Connect to Mongo Database
    1. install mongodb database
-   2. npm inlstall mongoose
+   2. npm install mongoose
    3. connect to mongodb database
+   4. Seed sample data

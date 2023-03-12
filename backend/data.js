@@ -1,7 +1,7 @@
 const data = {
     products:[
         {
-            _id: '1',
+            //_id: '1',
             slug: 'fit-slim-shirt',
             name: 'fit slim shirt',
             category: 'shirts',
@@ -14,7 +14,7 @@ const data = {
             description: 'High quality shirt'
         },
         {
-            _id: '2',
+            //_id: '2',
             slug: 'Button-tweed-Cotton-blazer',
             name: 'Button tweed blazer',
             category: 'shirts',
@@ -28,7 +28,7 @@ const data = {
      
         },
         {
-            _id: '3',
+            //_id: '3',
             slug: 'Cotton-T-shirt',
             name: 'Cotton T-shirt',
             category: 'shirts',
@@ -42,7 +42,7 @@ const data = {
      
         },
         {
-            _id: '4',
+            //_id: '4',
             slug: 'Slim-striped-pocket-shirt',
             name: 'Slim striped pocket shirt',
             category: 'shirts',
@@ -56,7 +56,7 @@ const data = {
      
         },
         {
-            _id: '5',
+            //_id: '5',
             slug: 'fit-micro-corduroy-shirt',
             name: 'fit micro couduroy shirt',
             category: 'shirts',
@@ -70,7 +70,7 @@ const data = {
      
         },
         {
-            _id: '6',
+            //_id: '6',
             slug: 'Tropical-kimono',
             name: 'Tropical kimono',
             category: 'shirts',
