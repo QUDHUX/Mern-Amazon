@@ -3,13 +3,13 @@ const data = {
         {
             _id: '1',
             slug: 'fit-slim-shirt',
-            name: 'fit slim shirt',
+            name: 'fit slim shir',
             category: 'shirts',
             image: '/images/product-1.jpg',
             price: 59,
             brand: 'nike',
-            rating: 4.5,
-            numReviews: 10,
+            rating: 3,
+            numReviews: 11,
             countInStock: 6,
             description: 'High quality shirt'
         },
