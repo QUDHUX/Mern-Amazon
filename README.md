@@ -125,4 +125,9 @@
    2. handle save shipping address
    3. add checkout wizard bar
 
+25. Create signup screen
+   1. create input forms
+   2. handle submit forms
+   3. create backend api
    
+
