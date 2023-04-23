@@ -62,8 +62,8 @@
 
 12. Create product detail screen
 
-   	1. fetch product from backend
-   	2. create 3 columns for image, info and action
+	        1. fetch product from backend
+	        2. create 3 columns for image, info and action
 
 13. Create loading and message component
 
