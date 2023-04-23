@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useReducer, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -23,7 +23,7 @@ export default function ShippingAddressScreen() {
   const [country, setCountry] = useState(shippingAddress.country || '');
   useEffect(() => {
     if (!userInfo) {
-      navigate('signin?redirect=/shipping');
+      navigate('/signin?redirect=/shipping');
     }
   }, [userInfo, navigate]);
   const submitHandler = (e) => {
@@ -49,7 +49,7 @@ export default function ShippingAddressScreen() {
         country,
       })
     );
-    navigate('payment');
+    navigate('/payment');
   };
 
   return (
